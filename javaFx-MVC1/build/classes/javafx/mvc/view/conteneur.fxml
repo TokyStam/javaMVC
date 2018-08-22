@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="Vbox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.mvc.controller.ConteneurController">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Information">
+            <items>
+              <MenuItem fx:id="menuListeUser" mnemonicParsing="false" onAction="#handleItemeUser" text="Clients" />
+                  <MenuItem fx:id="menuCategories" mnemonicParsing="false" text="Categories" />
+                  <MenuItem fx:id="menuProduit" mnemonicParsing="false" onAction="#handleItemeProduit" text="Produits" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFermer" text="Quiter" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Processus">
+              <items>
+                <MenuItem fx:id="menuVente" mnemonicParsing="false" onAction="#handleItemeVente" text="Vente" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Relation">
+              <items>
+                <MenuItem fx:id="menuRelationClientVente" mnemonicParsing="false" text="Client et produits" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Grapique">
+            <items>
+              <MenuItem fx:id="menuDiagramme" mnemonicParsing="false" onAction="#handleGrapheVenteParMoi" text="Vente par mois" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane fx:id="anchorPane" prefHeight="405.0" prefWidth="633.0">
+         <padding>
+            <Insets right="-5.0" />
+         </padding>
+      </AnchorPane>
+   </children>
+</VBox>

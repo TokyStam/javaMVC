@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="399.0" prefWidth="431.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafx.mvc.controller.ProduitDialogController">
+   <children>
+      <GridPane layoutX="73.0" layoutY="32.0" prefHeight="250.0" prefWidth="286.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Reference" />
+            <Label text="Designation" GridPane.rowIndex="1" />
+            <Label text="PU" GridPane.rowIndex="2" />
+            <Label text="Qte en stoque" GridPane.rowIndex="3" />
+            <Label text="Commentaire" GridPane.rowIndex="5" />
+            <Label text="Debut" GridPane.rowIndex="4" />
+            <TextField fx:id="champNumPro" GridPane.columnIndex="1" />
+            <TextField fx:id="champDesignation" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="champDebutStk" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="champPU" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="champQteEnStk" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextArea fx:id="champCommentaire" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+      <HBox layoutX="232.0" layoutY="321.0" prefHeight="49.0" prefWidth="161.0">
+         <children>
+            <Button fx:id="ValiderProduit" mnemonicParsing="false" onAction="#handleButtonValider" text="Valider" />
+            <Button fx:id="AnnulerProduit" mnemonicParsing="false" onAction="#ButtonAnnuler" text="Annuler">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
